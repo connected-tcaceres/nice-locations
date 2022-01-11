@@ -15,8 +15,10 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return a list of locations', () => {
+      expect(appController.listLocations()).toMatchObject({
+        locations: ['Location 1', 'Location 2', 'Location 3'],
+      });
     });
   });
 });
